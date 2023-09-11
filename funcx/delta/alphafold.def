@@ -1,0 +1,10 @@
+BootStrap: docker
+From: pyhf/cuda:0.7.0-jax-cuda-11.6.0-cudnn8
+
+%post
+    git clone https://github.com/SINDHUSITA/alphafold.git
+    cd alphafold
+    pip install funcx-common==0.0.25
+    pip install funcx-endpoint==1.0.11
+    pip install -r requirements.txt
+    pip freeze
